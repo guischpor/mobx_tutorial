@@ -24,21 +24,6 @@ mixin _$Counter on _Counter, Store {
     });
   }
 
-  final _$nomeAtom = Atom(name: '_Counter.nome');
-
-  @override
-  String get nome {
-    _$nomeAtom.reportRead();
-    return super.nome;
-  }
-
-  @override
-  set nome(String value) {
-    _$nomeAtom.reportWrite(value, super.nome, () {
-      super.nome = value;
-    });
-  }
-
   final _$_CounterActionController = ActionController(name: '_Counter');
 
   @override
@@ -53,21 +38,9 @@ mixin _$Counter on _Counter, Store {
   }
 
   @override
-  void imprimeNome() {
-    final _$actionInfo =
-        _$_CounterActionController.startAction(name: '_Counter.imprimeNome');
-    try {
-      return super.imprimeNome();
-    } finally {
-      _$_CounterActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
   String toString() {
     return '''
-count: ${count},
-nome: ${nome}
+count: ${count}
     ''';
   }
 }

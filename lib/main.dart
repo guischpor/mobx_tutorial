@@ -45,13 +45,17 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
             ),
-            Text('${counter.nome}'),
             Observer(builder: (_) {
               return Text(
                 '${counter.count}',
                 // ignore: deprecated_member_use
-                style: Theme.of(context).textTheme.display1,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40,
+                  color: Colors.amber,
+                ),
               );
             })
           ],

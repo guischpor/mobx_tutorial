@@ -8,23 +8,16 @@ abstract class _Counter with Store {
   @observable
   int count = 0;
 
-  @observable
-  String nome = "Guilherme";
-
   @action
   void increment() {
     count++;
-  }
-
-  @action
-  void imprimeNome() {
-    print(nome);
   }
 }
 
 //rodar o gerador de codigo
 //flutter packages pub run build_runner watch -> executa o code runner de forma automatica
 //flutter packages pub run build_runner build -> executa o code runner apenas uma vez
+//flutter packages pub run build_runner clean -> executa o code runner limpando os arquivos gerados
 
 // class Counter {
 //   //construtor
